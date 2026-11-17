@@ -165,7 +165,7 @@ def nav(current, has_updates):
         items.append(("/updates/", "Updates"))
     out = "".join(f'<a href="{u}"{" aria-current=\"page\"" if u == current else ""}>{t}</a>' for u, t in items)
     out += f'<a href="/get-involved/"{" aria-current=\"page\"" if current == "/get-involved/" else ""}>Get Involved</a>'
-    out += f'<a class="btn btn-gold" href="/get-involved/#donate">Donate</a>'
+    out += f'<a class="btn btn-gold" href="{SITE['venmo']}" target="_blank" rel="noopener">Donate</a>'
     return out
 
 
@@ -304,7 +304,7 @@ def cta():
 <p class="lead" style="color:#D5DCEA">Local races are won by neighbors talking to neighbors. A yard sign, a few doors or a letter to the editor makes a real difference.</p>
 <div class="grid grid-3" style="margin-top:32px">
 <div class="card"><h3>Volunteer</h3><p>Yard signs, door hangers, letters of support, or host a meet and greet.</p><a class="more" style="color:var(--gold)" href="/get-involved/">Sign up →</a></div>
-<div class="card"><h3>Donate</h3><p>Every dollar goes to signs, mailers and getting the word out in Logan.</p><a class="more" style="color:var(--gold)" href="/get-involved/#donate">Donate →</a></div>
+<div class="card"><h3>Donate</h3><p>Every dollar goes to signs, mailers and getting the word out in Logan.</p><a class="more" style="color:var(--gold)" href="{SITE['venmo']}" target="_blank" rel="noopener">Donate on Venmo →</a></div>
 <div class="card"><h3>Register to vote</h3><p>Check your registration or register in a couple of minutes.</p><a class="more" style="color:var(--gold)" href="{SITE['register']}" rel="noopener">vote.utah.gov →</a></div>
 </div>
 </div></section>"""
@@ -485,7 +485,7 @@ def main():
 <section class="section"><div class="wrap split" style="align-items:start">
 {vol}
 <div style="display:grid;gap:24px">
-<div class="card" id="donate"><p class="eyebrow">Donate</p><h3>Chip in to the campaign</h3><p>Donations pay for yard signs, door hangers and mailers. Venmo is the fastest way to give.</p><p><a class="btn btn-gold" href="{SITE['venmo']}" rel="noopener">Donate with Venmo</a></p><p class="muted" style="font-size:15px">Prefer a check? Email <a href="mailto:{SITE['email']}">{SITE['email']}</a>. Contributions are reported as required by Utah law.</p></div>
+<div class="card" id="donate"><p class="eyebrow">Donate</p><h3>Chip in to the campaign</h3><p>Donations pay for yard signs, door hangers and mailers. Venmo is the fastest way to give.</p><p><a class="btn btn-gold" href="{SITE['venmo']}" target="_blank" rel="noopener">Donate with Venmo (@MikeJPhoto)</a></p><p class="muted" style="font-size:15px">Prefer a check? Email <a href="mailto:{SITE['email']}">{SITE['email']}</a>. Contributions are reported as required by Utah law.</p></div>
 {news}
 <div class="card"><p class="eyebrow">Vote</p><h3>Make sure you're registered</h3><p>Check your registration or register at <a href="{SITE['register']}" rel="noopener">vote.utah.gov</a>.</p></div>
 <div class="card" id="contact"><p class="eyebrow">Contact</p><h3>Talk to Mike</h3><p>Campaign: <a href="mailto:{SITE['email']}">{SITE['email']}</a> · <a href="tel:{SITE['phone'].replace('-', '')}">{SITE['phone']}</a><br>City business: <a href="mailto:{SITE['council_email']}">{SITE['council_email']}</a></p></div>
