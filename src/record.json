@@ -1,6 +1,12 @@
 {
   "intro": "Logan voters elected me in 2023. My colleagues chose me as Vice Chair in 2025 and Chair in 2026. Council decisions are made together, and every item below links to the official minutes so you can check the record yourself.",
-  "topics": ["Housing", "Budgets", "Transparency", "Transportation", "Community"],
+  "topics": [
+    "Housing",
+    "Budgets",
+    "Transparency",
+    "Transportation",
+    "Community"
+  ],
   "items": [
     {
       "topic": "Housing",
@@ -50,26 +56,26 @@
     {
       "topic": "Budgets",
       "year": "2024–2025",
-      "title": "Kept Logan out of a risky 20-year power contract",
-      "summary": "I moved to approve a smaller natural-gas 'peaker' plant for peak demand. I opposed signing Logan onto a large baseload plant because of the financial risk of a 20-year commitment. In January 2025 the council voted 4–1 not to join.",
-      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2025January7.pdf",
-      "source_label": "Council minutes, Dec. 3, 2024 and Jan. 7, 2025",
+      "title": "Took the time to get a 20-year power contract right",
+      "summary": "In December 2024 I voted against rushing Logan into a 20-year baseload power contract before we had looked at the alternatives. The council asked staff and our renewable energy advisory board to study solar, battery storage and geothermal options. When that research showed nothing else viable for at least five to ten years, as the Hunter and Sunnyside coal plants head offline, I voted yes in April 2025 to keep Logan's power reliable and affordable.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2025April1.pdf",
+      "source_label": "Council minutes, Dec. 3, 2024, Jan. 7 and Apr. 1, 2025",
       "featured": false
     },
     {
       "topic": "Budgets",
-      "year": "2024–2025",
+      "year": "2024–present",
       "title": "Served on the city's Audit Committee",
-      "summary": "I reviewed the city's quarterly finances and helped select a new independent auditor in 2025.",
-      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20MINUTES%2025February18.pdf",
-      "source_label": "Council minutes, Feb. 18, 2025",
+      "summary": "I've served on the Audit Committee since 2024. We review the city's quarterly finances, and in 2025 we selected a new independent auditor.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024February20.pdf",
+      "source_label": "Council minutes, Feb. 20, 2024 and Feb. 18, 2025",
       "featured": false
     },
     {
       "topic": "Transparency",
       "year": "2026",
       "title": "Opened City Hall with monthly office hours",
-      "summary": "The Mayor and council members now hold open office hours on the first Tuesday of every month at 4:30 p.m. at City Hall. No appointment is needed.",
+      "summary": "Together with Mayor Anderson and my fellow council members, we started open office hours on the first Tuesday of every month at 4:30 p.m. at City Hall. Anyone can stop by with a question or concern. No appointment is needed.",
       "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026March3.pdf",
       "source_label": "Council minutes, Mar. 3, 2026",
       "featured": true
@@ -103,12 +109,39 @@
     },
     {
       "topic": "Transportation",
+      "year": "2025",
+      "title": "Helped build Logan's first protected bike lane on 500 North",
+      "summary": "I was a key part of bringing Logan its first protected bike lane, on 500 North, one of the city's busiest routes for people on bikes. When cars started parking in it, I pushed for enforcement so it stays safe.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2025May20.pdf",
+      "source_label": "Council minutes, May 20 and June 17, 2025",
+      "featured": true
+    },
+    {
+      "topic": "Transportation",
+      "year": "2025–2026",
+      "title": "Secured ongoing funding for sidewalks, bike lanes and trails",
+      "summary": "I secured additional ongoing funding for active transportation (sidewalks, bike lanes and trail connections) in the Public Works budget, so these projects no longer depend on one-time money.",
+      "source": "",
+      "source_label": "",
+      "featured": false
+    },
+    {
+      "topic": "Transportation",
+      "year": "2026",
+      "title": "Working toward a new active transportation master plan",
+      "summary": "We're now working toward a new active transportation master plan for Logan, to map out safe walking and biking routes across the whole city.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026May12%20Budget%20Workshop.pdf",
+      "source_label": "Budget workshop minutes, May 12, 2026",
+      "featured": false
+    },
+    {
+      "topic": "Transportation",
       "year": "2024–2025",
-      "title": "Made walking and biking part of Logan's transportation plan",
+      "title": "Made walking and biking part of Logan's transportation planning",
       "summary": "As council liaison to the Bicycle and Pedestrian Advisory Committee, I pushed for the city's transportation master plan to build in safe walking and biking routes. I joined UDOT's walk audit of Highway 89/91 and promoted Logan's Bike Week each year.",
       "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024March5.pdf",
       "source_label": "Council minutes, Mar. 5 and May 7, 2024",
-      "featured": true
+      "featured": false
     },
     {
       "topic": "Transportation",
