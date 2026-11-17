@@ -34,6 +34,8 @@ content:
           - { name: source, label: Source link (minutes PDF or article), type: string }
           - { name: source_label, label: Source label, type: string, description: "e.g. Council minutes, June 18, 2024" }
           - { name: featured, label: Show on home page (pick 4), type: boolean }
+          - { name: card_title, label: Home page card headline (optional, shorter), type: string }
+          - { name: short, label: Home page card text (optional, one sentence), type: text }
       - name: topics
         type: string
         list: true
@@ -84,6 +86,23 @@ content:
         label: Post
         type: rich-text
         options: { format: markdown }
+
+  - name: photos
+    label: Home page photos
+    type: file
+    path: src/photos.json
+    format: json
+    fields:
+      - name: items
+        label: Photos (3 work best)
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image, required: true, description: "About 1600 px wide, under 1 MB." }
+          - { name: alt, label: Photo description (for Google and screen readers), type: string, required: true }
+          - { name: title, label: Bold first line, type: string }
+          - { name: caption, label: Caption, type: text }
+      - { name: credit, label: Photo credit line, type: string }
 
   - name: about
     label: About page

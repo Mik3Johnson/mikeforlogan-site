@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "image": "/img/logan-main-street.jpg",
+      "alt": "Historic storefronts on Main Street in downtown Logan",
+      "title": "The heart of Logan.",
+      "caption": "Every Christmas our family walks Main Street to see the lights. Local shops and a busy downtown keep that heart beating."
+    },
+    {
+      "image": "/img/logan-canyon.jpg",
+      "alt": "Logan Canyon at sunset with the highway winding along the river",
+      "title": "Minutes from the mountains.",
+      "caption": "Imagine walking or biking from your neighborhood all the way up the canyon. That's the \"Logan Greenway.\""
+    },
+    {
+      "image": "/img/usu-old-main.jpg",
+      "alt": "Old Main at Utah State University under a dramatic sky",
+      "title": "Where our Logan story started.",
+      "caption": "My wife and I came here for USU and never left. I want today's graduates to be able to afford to stay too."
+    }
+  ],
+  "credit": "Main Street photo: Michael Hart / Unsplash. Other photos by Mike Johnson."
+}

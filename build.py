@@ -18,6 +18,7 @@ SRC = os.path.join(ROOT, "src")
 DIST = os.path.join(ROOT, "dist")
 J = lambda n: json.load(open(os.path.join(SRC, n), encoding="utf-8"))
 SITE, RECORD, PRIORITIES, FAQ = J("site.json"), J("record.json"), J("priorities.json"), J("faq.json")
+PHOTOS = J("photos.json") if os.path.exists(os.path.join(SRC, "photos.json")) else {"items": []}
 BASE = SITE["url"].rstrip("/")
 TODAY = date.today().isoformat()
 YEAR = date.today().year
@@ -172,7 +173,7 @@ def nav(current, has_updates):
 def header(current, has_updates):
     return f"""<header class="site-header">
 <div class="wrap">
-<a class="brand" href="/" aria-label="Mike Johnson for Logan City Council, home"><b>MIKE JOHNSON</b><span>FOR LOGAN CITY COUNCIL</span></a>
+<a class="brand" href="/" aria-label="Mike Johnson for Logan City Council, home"><img src="/img/mike-for-logan-logo.png" alt="Mike Johnson, Logan City Council. Focusing On Our Future." width="960" height="531"></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
 <nav id="main-nav" aria-label="Main">{nav(current, has_updates)}</nav>
 </div>
@@ -239,11 +240,11 @@ def shell(url, title, desc, body, schema, current=None, og_image=None, noindex=F
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="US-UT">
 <meta name="geo.placename" content="Logan, Utah">
-<meta name="theme-color" content="#12284C">
+<meta name="theme-color" content="#0E2A4F">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{ld}</script>
 </head>
@@ -270,9 +271,8 @@ def write(url, content):
 def record_cards(items):
     return "".join(f"""<article class="card">
 <span class="tag">{esc(r['topic'])}</span>
-<div class="yr">{esc(r['year'])}</div>
-<h3>{esc(r['title'])}</h3>
-<p>{esc(r['summary'])}</p>
+<h3>{esc(r.get('card_title') or r['title'])}</h3>
+<p>{esc(r.get('short') or r['summary'])}</p>
 </article>""" for r in items)
 
 
@@ -289,25 +289,33 @@ def faq_html(items):
 
 
 def facts():
-    return """<section class="facts" aria-label="Quick facts"><div class="wrap"><ul>
+    return """<section class="facts wrap" aria-label="Quick facts"><ul>
 <li><strong>2023</strong><span>Elected to Logan City Council</span></li>
 <li><strong>2025</strong><span>Council Vice Chair</span></li>
 <li><strong>2026</strong><span>Council Chair</span></li>
 <li><strong>2027</strong><span>Running for re-election</span></li>
-</ul></div></section>"""
+</ul></section>"""
 
 
-def cta():
-    return f"""<section class="cta"><div class="wrap">
-<p class="eyebrow">Join the campaign</p>
-<h2>Help keep Logan moving forward</h2>
-<p class="lead" style="color:#D5DCEA">Local races are won by neighbors talking to neighbors. A yard sign, a few doors or a letter to the editor makes a real difference.</p>
-<div class="grid grid-3" style="margin-top:32px">
-<div class="card"><h3>Volunteer</h3><p>Yard signs, door hangers, letters of support, or host a meet and greet.</p><a class="more" style="color:var(--gold)" href="/get-involved/">Sign up →</a></div>
-<div class="card"><h3>Donate</h3><p>Every dollar goes to signs, mailers and getting the word out in Logan.</p><a class="more" style="color:var(--gold)" href="{SITE['venmo']}" target="_blank" rel="noopener">Donate on Venmo →</a></div>
-<div class="card"><h3>Register to vote</h3><p>Check your registration or register in a couple of minutes.</p><a class="more" style="color:var(--gold)" href="{SITE['register']}" rel="noopener">vote.utah.gov →</a></div>
+def cta(heading="Help keep Logan moving forward"):
+    return f"""<section class="involved wrap" aria-label="Get involved"><div class="involved-box">
+<h2>{heading}</h2>
+<p>Local races are won by neighbors talking to neighbors. Pick one and you've already made a difference.</p>
+<div class="involved-grid">
+<a href="/get-involved/"><strong>Get a yard sign</strong><span>Put one in your yard, or help hang door hangers.</span><span class="go">Sign up →</span></a>
+<a href="/get-involved/"><strong>Volunteer</strong><span>Write a letter of support or host a neighborhood meet and greet.</span><span class="go">Count me in →</span></a>
+<a class="donate" href="{SITE['venmo']}" target="_blank" rel="noopener"><strong>Donate</strong><span>Signs, door hangers and mailers. Venmo @MikeJPhoto.</span><span class="go">Give now →</span></a>
+<a href="{SITE['register']}" rel="noopener"><strong>Register to vote</strong><span>Check or update your registration in two minutes.</span><span class="go">vote.utah.gov →</span></a>
 </div>
 </div></section>"""
+
+
+def photo_strip():
+    if not PHOTOS.get("items"):
+        return ""
+    figs = "".join(f'<figure>{img(p["image"], p["alt"])}<figcaption><strong>{esc(p["title"])}</strong> {esc(p["caption"])}</figcaption></figure>' for p in PHOTOS["items"])
+    credit = f'<p class="credit">{esc(PHOTOS["credit"])}</p>' if PHOTOS.get("credit") else ""
+    return f'<section class="section photo-strip" aria-label="Our Logan" style="padding-bottom:0"><div class="wrap"><div class="grid grid-3">{figs}</div>{credit}</div></section>'
 
 
 def form_open(fid, subject, thanks):
@@ -364,38 +372,40 @@ def main():
         latest = '<section class="section"><div class="wrap"><div class="section-head"><div><p class="eyebrow">From City Hall</p><h2>Council updates</h2></div><a href="/updates/">All updates →</a></div><div class="grid">' + "".join(
             f'<a href="/updates/{m["slug"]}/" style="text-decoration:none;color:inherit"><article class="card"><div class="post-meta">{nice_date(m["date"])}</div><h3>{esc(m["title"])}</h3><p>{esc(m["description"])}</p></article></a>'
             for m, _ in posts[:3]) + "</div></div></section>"
-    home = f"""<section class="hero"><div class="wrap">
-<div>
-<p class="eyebrow">Logan Municipal Council Chair</p>
+    home = f"""<section class="hero" aria-label="Introduction">
+<div class="hero-photo-band">{img('/img/logan-valley-hero.jpg', 'Logan, the Logan River and Cache Valley under sunbeams, seen from the foothills above First Dam', eager=True)}</div>
+<div class="wrap hero-card-wrap"><div class="hero-card">
+<div class="hero-text">
+<p class="eyebrow">Logan Municipal Council Chair · Re-elect 2027</p>
 <h1>Keep Logan focused on its future.</h1>
-<p class="lead">I'm Mike Johnson, a Logan small business owner, husband and dad. For four years I've worked on the city council for attainable homes, responsible budgets and a plan for the next generation. I'm running for re-election in 2027.</p>
+<p class="lead">I'm Mike Johnson, a Logan small business owner, husband and dad. For four years I've worked on the city council for starter homes, careful budgets and safer streets. I'm running for re-election in 2027.</p>
 <div class="btns"><a class="btn btn-navy" href="/get-involved/">Get involved</a><a class="btn btn-ghost" href="/record/">See my record</a></div>
 </div>
-<div class="hero-photo">{img(SITE['image'], 'Mike Johnson, Logan City Council Chair', eager=True)}</div>
-</div></section>
+<div class="hero-portrait">{img(SITE['image'], 'Mike Johnson, Logan City Council Chair')}</div>
+</div></div>
+</section>
 {facts()}
-<section class="section section-white"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow">Four years on the council</p><h2>What we've gotten done</h2></div><a href="/record/">Full record →</a></div>
+<section class="section"><div class="wrap">
+<div class="section-head"><div><p class="eyebrow">Four years on the council</p><h2>What we've gotten done together</h2></div><a href="/record/">Full record, with sources →</a></div>
 <div class="grid grid-4">{record_cards(featured)}</div>
 </div></section>
-<section class="section"><div class="wrap">
+<section class="section section-white"><div class="wrap">
 <div class="section-head"><div><p class="eyebrow">Priorities</p><h2>What I'm working on</h2></div><a href="/priorities/">More on each →</a></div>
-<div class="grid grid-3">{priority_cards(PRIORITIES['items'])}</div>
+<div class="grid grid-3">{priority_cards(PRIORITIES['items'], with_next=True)}</div>
 </div></section>
-<section class="section section-white"><div class="wrap split">
-<div>{img('/img/mike-johnson-community.jpg', 'Mike Johnson with Logan residents at a community event')}</div>
+{photo_strip()}
+<section class="section"><div class="wrap split">
+<div>{img('/img/mike-johnson-family.jpg', 'Mike Johnson with his wife and son among fall leaves in Logan, Utah', cls='portrait')}</div>
 <div>
 <p class="eyebrow">About Mike</p>
-<h2>A neighbor, not a politician</h2>
-<p>My wife and I came to Logan for Utah State University and never left. I run a photo and video business downtown, and you'll find me on the trails and in the canyon on Saturdays.</p>
-<p>On the council I read every packet, ask hard questions and try to answer every email. If something in Logan matters to you, I want to hear about it.</p>
-<div class="btns"><a class="btn btn-ghost" href="/about/">More about Mike</a></div>
+<p class="quote">“I love this place so much, and I really want to help Logan continue to be a wonderful place to live.”</p>
+<p class="muted">My wife and I came to Logan for Utah State University and never left. I run a photo and video business downtown, read every council packet and personally answer every email, call and text.</p>
+<p><a href="/about/" style="font-weight:700">More about Mike →</a></p>
 </div>
 </div></section>
 {latest}
 {cta()}
-<section class="section"><div class="wrap narrow">
-<p class="eyebrow">Questions</p>
+<section class="section" style="padding-top:0"><div class="wrap narrow">
 <h2>Common questions</h2>
 {faq_html(FAQ['items'])}
 </div></section>"""
@@ -482,9 +492,9 @@ def main():
 <p class="form-status" role="status" aria-live="polite"></p>
 </form>"""
     body = f"""<section class="page-hero"><div class="wrap"><p class="eyebrow">Get involved</p><h1>Help re-elect Mike Johnson to the Logan City Council</h1><p class="lead">Put up a yard sign, hand out door hangers, write a letter of support or host a neighborhood meet and greet. Every bit helps.</p></div></section>
-<section class="section"><div class="wrap split" style="align-items:start">
+<section class="section"><div class="wrap involved-layout">
 {vol}
-<div style="display:grid;gap:24px">
+<div class="stack">
 <div class="card" id="donate"><p class="eyebrow">Donate</p><h3>Chip in to the campaign</h3><p>Donations pay for yard signs, door hangers and mailers. Venmo is the fastest way to give.</p><p><a class="btn btn-gold" href="{SITE['venmo']}" target="_blank" rel="noopener">Donate with Venmo (@MikeJPhoto)</a></p><p class="muted" style="font-size:15px">Prefer a check? Email <a href="mailto:{SITE['email']}">{SITE['email']}</a>. Contributions are reported as required by Utah law.</p></div>
 {news}
 <div class="card"><p class="eyebrow">Vote</p><h3>Make sure you're registered</h3><p>Check your registration or register at <a href="{SITE['register']}" rel="noopener">vote.utah.gov</a>.</p></div>
