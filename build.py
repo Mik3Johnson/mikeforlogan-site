@@ -293,7 +293,7 @@ def facts():
 <li><strong>2023</strong><span>Elected to Logan City Council</span></li>
 <li><strong>2025</strong><span>Council Vice Chair</span></li>
 <li><strong>2026</strong><span>Council Chair</span></li>
-<li><strong>2012</strong><span>Started a Logan small business</span></li>
+<li><strong>2027</strong><span>Running for re-election</span></li>
 </ul></div></section>"""
 
 
