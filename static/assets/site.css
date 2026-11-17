@@ -192,3 +192,6 @@ legend { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
 .topic-h:first-of-type { margin-top: 8px; }
 .src { font-size: 15px; }
 .src a { color: var(--muted); }
+
+/* Portrait photos (About page family photo): keep faces in frame */
+.split img.portrait, .split .ph.portrait { aspect-ratio: 4 / 5; object-position: center 20%; }

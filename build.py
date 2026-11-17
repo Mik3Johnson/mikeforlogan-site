@@ -444,7 +444,7 @@ def main():
     about_md = open(os.path.join(SRC, "about.md"), encoding="utf-8").read()
     body = f"""<section class="page-hero"><div class="wrap"><p class="eyebrow">About Mike</p><h1>Small business owner. Dad. Logan neighbor.</h1></div></section>
 <section class="section"><div class="wrap split" style="align-items:start">
-<div>{img('/img/mike-johnson-family.jpg', 'Mike Johnson with his wife and son among fall leaves in Logan, Utah')}</div>
+<div>{img('/img/mike-johnson-family.jpg', 'Mike Johnson with his wife and son among fall leaves in Logan, Utah', cls='portrait')}</div>
 <div class="prose">{markdown(about_md)}</div>
 </div></section>
 {cta()}"""
