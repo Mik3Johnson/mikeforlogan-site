@@ -1,4 +1,6 @@
 // Cloudflare settings for mikeforlogan.com (static site served by Workers).
+// The mikeforlogan.com custom domain is attached in the Cloudflare dashboard
+// (Worker > Settings > Domains & Routes) once the domain is active on Cloudflare.
 {
   "name": "mikeforlogan",
   "compatibility_date": "2026-11-01",
@@ -6,9 +8,5 @@
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
-  },
-  "routes": [
-    { "pattern": "www.mikeforlogan.com", "custom_domain": true },
-    { "pattern": "mikeforlogan.com", "custom_domain": true }
-  ]
+  }
 }
