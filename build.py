@@ -368,14 +368,14 @@ def main():
 <div>
 <p class="eyebrow">Logan Municipal Council Chair</p>
 <h1>Keep Logan focused on its future.</h1>
-<p class="lead">I'm Mike Johnson, a Logan small business owner, husband and dad. For three years I've worked on the city council for attainable homes, responsible budgets and a plan for the next generation. I'm running for re-election in 2027.</p>
+<p class="lead">I'm Mike Johnson, a Logan small business owner, husband and dad. For four years I've worked on the city council for attainable homes, responsible budgets and a plan for the next generation. I'm running for re-election in 2027.</p>
 <div class="btns"><a class="btn btn-navy" href="/get-involved/">Get involved</a><a class="btn btn-ghost" href="/record/">See my record</a></div>
 </div>
 <div class="hero-photo">{img(SITE['image'], 'Mike Johnson, Logan City Council Chair', eager=True)}</div>
 </div></section>
 {facts()}
 <section class="section section-white"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow">Three years on the council</p><h2>What we've gotten done</h2></div><a href="/record/">Full record →</a></div>
+<div class="section-head"><div><p class="eyebrow">Four years on the council</p><h2>What we've gotten done</h2></div><a href="/record/">Full record →</a></div>
 <div class="grid grid-4">{record_cards(featured)}</div>
 </div></section>
 <section class="section"><div class="wrap">
@@ -420,7 +420,7 @@ def main():
             src = f'<p class="src"><a href="{esc(r["source"])}" rel="noopener">Source: {esc(r.get("source_label") or "Council minutes")}</a></p>' if r.get("source") else ""
             tl += f"<li><div class=\"yr\">{esc(r['year'])}</div><h3>{esc(r['title'])}</h3><p>{esc(r['summary'])}</p>{src}</li>"
         tl += "</ol>"
-    body = f"""<section class="page-hero"><div class="wrap"><p class="eyebrow">My record</p><h1>Three years on the Logan City Council</h1><p class="lead">{esc(RECORD['intro'])}</p></div></section>
+    body = f"""<section class="page-hero"><div class="wrap"><p class="eyebrow">My record</p><h1>Four years on the Logan City Council</h1><p class="lead">{esc(RECORD['intro'])}</p></div></section>
 <section class="section"><div class="wrap narrow">{jump}{tl}
 <p class="muted">Council decisions are made by the full council, working with the Mayor and city staff. Minutes and video of every meeting are on the <a href="https://www.loganutah.gov/government/city_council/index.php" rel="noopener">City of Logan website</a>.</p></div></section>
 {cta()}"""
