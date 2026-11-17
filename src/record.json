@@ -1,0 +1,61 @@
+{
+  "intro": "I was elected to the Logan Municipal Council in 2023. My colleagues chose me as Vice Chair in 2025 and Chair in 2026. Here is some of what we've gotten done together.",
+  "items": [
+    {
+      "year": "2026",
+      "title": "Adopted the Logan 2045 General Plan",
+      "topic": "Long-term vision",
+      "summary": "Logan's first full general plan update since 2007. After hundreds of resident comments, neighborhood meetings and council workshops, the plan now guides where housing, jobs, parks and roads go for the next 20 years.",
+      "link": "https://logan-ut-general-plan-hlplanning.hub.arcgis.com/",
+      "featured": true
+    },
+    {
+      "year": "2026",
+      "title": "Helped local families buy their first homes at River Crossing",
+      "topic": "Attainable housing",
+      "summary": "A City of Logan partnership with Visionary Homes built eight income-qualified townhomes near 600 South and 100 West, priced for working families. All eight sold in about a month.",
+      "link": "",
+      "featured": true
+    },
+    {
+      "year": "2025",
+      "title": "Set aside downtown land for low-income senior housing",
+      "topic": "Attainable housing",
+      "summary": "The council approved conveying a vacant city parcel near 300 South and 100 East for low-income senior housing, with a deed restriction: if it isn't built within five years, the land returns to the city.",
+      "link": "",
+      "featured": false
+    },
+    {
+      "year": "2026",
+      "title": "Opened the data center discussion to the public",
+      "topic": "Transparency",
+      "summary": "As Chair, I scheduled public open houses in August and October 2026 so residents could ask questions about a proposed data center before the council made decisions.",
+      "link": "",
+      "featured": true
+    },
+    {
+      "year": "2026",
+      "title": "Led the council as Chair",
+      "topic": "Leadership",
+      "summary": "Ran every regular council meeting in 2026, kept public comment open at each one, and represented Logan on the Logan-Cache Airport sponsor board, the Golf Advisory Board and other city boards.",
+      "link": "https://www.loganutah.gov/government/city_council/index.php",
+      "featured": true
+    },
+    {
+      "year": "2024–2026",
+      "title": "Supported the Logan Youth City Council",
+      "topic": "Community",
+      "summary": "Worked with Logan's Youth City Council, giving high school students a real seat in local government and a chance to bring their ideas to the council.",
+      "link": "",
+      "featured": false
+    },
+    {
+      "year": "2025",
+      "title": "Served on the Renewable Energy & Sustainability Advisory Board",
+      "topic": "Utilities",
+      "summary": "Council liaison to RESAB, which advises the city on Logan Light & Power's energy mix and keeping power reliable and affordable.",
+      "link": "",
+      "featured": false
+    }
+  ]
+}

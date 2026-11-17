@@ -1,0 +1,121 @@
+# Pages CMS editor for mikeforlogan.com — https://app.pagescms.org
+# Every save is a commit to GitHub; Cloudflare rebuilds the live site in about 2 minutes.
+
+media:
+  input: img
+  output: /img
+  categories: [image]
+
+content:
+  - name: record
+    label: My Record
+    type: file
+    path: src/record.json
+    format: json
+    fields:
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: items
+        label: Accomplishments
+        type: object
+        list: true
+        description: Newest or most important first. "Featured" ones (up to 4) show on the home page.
+        fields:
+          - { name: year, label: Year, type: string, required: true }
+          - { name: title, label: Headline, type: string, required: true }
+          - { name: topic, label: Topic, type: string, description: "e.g. Attainable housing, Transparency" }
+          - { name: summary, label: What happened (2–3 sentences), type: text, required: true }
+          - { name: link, label: Link for more info (optional), type: string }
+          - { name: featured, label: Show on home page, type: boolean }
+
+  - name: priorities
+    label: Priorities
+    type: file
+    path: src/priorities.json
+    format: json
+    fields:
+      - name: intro
+        label: Intro paragraph
+        type: text
+      - name: items
+        label: Priorities
+        type: object
+        list: true
+        fields:
+          - { name: id, label: Short ID (no spaces), type: string, required: true }
+          - { name: title, label: Title, type: string, required: true }
+          - { name: summary, label: Summary, type: text, required: true }
+          - { name: next, label: "What's next", type: text }
+
+  - name: updates
+    label: Council Updates
+    type: collection
+    path: src/updates
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date]
+      default: { sort: date, order: desc }
+    fields:
+      - { name: title, label: Title, type: string, required: true, description: "Under ~60 characters works best in Google." }
+      - { name: description, label: Google description, type: text, description: "1–2 sentences, 120–155 characters. Leave empty to use the first lines of the post." }
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options: { format: yyyy-MM-dd }
+      - { name: image, label: Photo (optional), type: image }
+      - { name: image_alt, label: Photo description, type: string }
+      - { name: draft, label: Draft (hide from the site), type: boolean }
+      - name: body
+        label: Post
+        type: rich-text
+        options: { format: markdown }
+
+  - name: about
+    label: About page
+    type: file
+    path: src/about.md
+    format: code
+    options: { language: markdown }
+
+  - name: faq
+    label: Common questions
+    type: file
+    path: src/faq.json
+    format: json
+    fields:
+      - name: items
+        label: Questions
+        type: object
+        list: true
+        description: These also feed Google and AI search answers. Keep answers short and factual.
+        fields:
+          - { name: q, label: Question, type: string, required: true }
+          - { name: a, label: Answer, type: text, required: true }
+
+  - name: campaign
+    label: Campaign info
+    type: file
+    path: src/site.json
+    format: json
+    fields:
+      - { name: name, label: Campaign name, type: string }
+      - { name: status_line, label: Status line (footer), type: string }
+      - { name: description, label: Description for Google and AI search, type: text }
+      - { name: phone, label: Phone, type: string }
+      - { name: phone_e164, label: Phone (international format), type: string }
+      - { name: email, label: Campaign email, type: string }
+      - { name: council_email, label: City council email, type: string }
+      - { name: venmo, label: Donation link, type: string }
+      - { name: paid_for, label: '"Paid for by" line (required by Utah law)', type: string }
+      - { name: image, label: Main headshot path, type: string }
+      - { name: same_as, label: Social profiles, type: string, list: true }
+      - { name: url, type: string, hidden: true }
+      - { name: short_name, type: string, hidden: true }
+      - { name: tagline, type: string, hidden: true }
+      - { name: register, type: string, hidden: true }
+      - { name: web3forms_key, type: string, hidden: true }

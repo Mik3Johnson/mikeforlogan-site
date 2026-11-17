@@ -1,0 +1,11 @@
+# Old Squarespace pages -> new pages (permanent, keeps search ranking)
+/involved          /get-involved/        301
+/involved/         /get-involved/        301
+/get-involved      /get-involved/        301
+/home              /                     301
+/cart              /                     301
+/contact           /get-involved/#contact 301
+/donate            /get-involved/#donate  301
+/volunteer         /get-involved/        301
+/accomplishments   /record/              301
+/issues            /priorities/          301

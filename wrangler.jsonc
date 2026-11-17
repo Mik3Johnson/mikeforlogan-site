@@ -1,0 +1,14 @@
+// Cloudflare settings for mikeforlogan.com (static site served by Workers).
+{
+  "name": "mikeforlogan",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "www.mikeforlogan.com", "custom_domain": true },
+    { "pattern": "mikeforlogan.com", "custom_domain": true }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "intro": "These are the same priorities I ran on in 2023. They still guide every vote I take.",
+  "items": [
+    {
+      "id": "housing",
+      "title": "Attainable housing",
+      "summary": "Homes that young families, seniors and workers can actually afford, while limiting sprawl into farmland and foothills.",
+      "next": "Build on River Crossing with more income-qualified homes to buy, and keep student housing near campus so single-family homes stay available for families."
+    },
+    {
+      "id": "budget",
+      "title": "Fiscal responsibility",
+      "summary": "A balanced budget, careful spending and no waste. Every tax dollar should do real work for Logan.",
+      "next": "Keep core services strong (police, fire, roads, water) and look hard at anything that isn't."
+    },
+    {
+      "id": "traffic",
+      "title": "Traffic & infrastructure",
+      "summary": "Less congestion through a western bypass, better arterial roads, and a plan for safe walking and biking.",
+      "next": "Keep pushing the western corridor and fix the roads, water and power lines we already have."
+    },
+    {
+      "id": "spaces",
+      "title": "Parks, trails & places to gather",
+      "summary": "More parks, trails and community spaces, and support for the small businesses that make downtown a place people want to be.",
+      "next": "Protect access to the Logan River and keep downtown lively."
+    },
+    {
+      "id": "jobs",
+      "title": "Quality local jobs",
+      "summary": "Support for local businesses, entrepreneurs and higher-paying jobs so our kids can build a life here.",
+      "next": "Make it simpler to start and grow a small business in Logan."
+    },
+    {
+      "id": "vision",
+      "title": "Long-term vision",
+      "summary": "Plan roads, housing and businesses for the next generation, not just the next election.",
+      "next": "Put the Logan 2045 General Plan to work, one zoning decision at a time."
+    }
+  ]
+}
