@@ -1,60 +1,140 @@
 {
-  "intro": "I was elected to the Logan Municipal Council in 2023. My colleagues chose me as Vice Chair in 2025 and Chair in 2026. Here is some of what we've gotten done together.",
+  "intro": "Logan voters elected me in 2023. My colleagues chose me as Vice Chair in 2025 and Chair in 2026. Council decisions are made together, and every item below links to the official minutes so you can check the record yourself.",
+  "topics": ["Housing", "Budgets", "Transparency", "Transportation", "Community"],
   "items": [
     {
+      "topic": "Housing",
+      "year": "2024–2026",
+      "title": "Made room for eight starter homes families could actually buy",
+      "summary": "I seconded the 2024 street right-of-way change at 100 West and 600 South that created the land for River Crossing, a city partnership with Visionary Homes. The eight income-qualified townhomes sold for about $279,000, about $40,000 below appraisal, and all sold within about a month. A five-year owner-occupancy rule keeps them from being flipped.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024December3.pdf",
+      "source_label": "Council minutes, Dec. 3, 2024 and July 21, 2026",
+      "featured": true
+    },
+    {
+      "topic": "Housing",
+      "year": "2024",
+      "title": "Made it easier for homeowners to add an accessory apartment",
+      "summary": "During the 2024 rewrite of Logan's accessory dwelling unit (ADU) and short-term rental rules, I pointed out that the 6,000-square-foot minimum lot for an ADU was redundant. The council removed it. I also proposed letting owner-occupied short-term rentals operate under neighbor-friendly limits. The ordinance passed 5–0.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024October1.pdf",
+      "source_label": "Council minutes, Sept. 3 and Oct. 1, 2024",
+      "featured": false
+    },
+    {
+      "topic": "Housing",
       "year": "2026",
       "title": "Adopted the Logan 2045 General Plan",
-      "topic": "Long-term vision",
-      "summary": "Logan's first full general plan update since 2007. After hundreds of resident comments, neighborhood meetings and council workshops, the plan now guides where housing, jobs, parks and roads go for the next 20 years.",
-      "link": "https://logan-ut-general-plan-hlplanning.hub.arcgis.com/",
-      "featured": true
-    },
-    {
-      "year": "2026",
-      "title": "Helped local families buy their first homes at River Crossing",
-      "topic": "Attainable housing",
-      "summary": "A City of Logan partnership with Visionary Homes built eight income-qualified townhomes near 600 South and 100 West, priced for working families. All eight sold in about a month.",
-      "link": "",
-      "featured": true
-    },
-    {
-      "year": "2025",
-      "title": "Set aside downtown land for low-income senior housing",
-      "topic": "Attainable housing",
-      "summary": "The council approved conveying a vacant city parcel near 300 South and 100 East for low-income senior housing, with a deed restriction: if it isn't built within five years, the land returns to the city.",
-      "link": "",
+      "summary": "This is Logan's first full general plan since 2007, adopted after a 17-month process with neighborhood meetings across the city. As Chair, I pushed to keep design requirements from driving up the cost of new homes. The plan now guides where housing, jobs, parks and roads go for the next 20 years.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026May05.pdf",
+      "source_label": "Council minutes, Apr. 21 and May 5, 2026",
       "featured": false
     },
     {
+      "topic": "Budgets",
       "year": "2026",
-      "title": "Opened the data center discussion to the public",
+      "title": "Funded a west-side fire station without raising the typical homeowner's total tax bill",
+      "summary": "Cache County cut its fire levy because Logan residents were paying for county fire service they didn't receive. As Chair, I led a months-long review of alternatives. The council then shifted that same amount, about $59 on a median home, to build Fire Station 73 and keep a police officer on the street. The county line on your bill went down and the city line went up by about the same amount. The council approved it 5–0.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026August11%20Truth%20in%20Taxation%20Meeting.pdf",
+      "source_label": "Council minutes, June 16 and Aug. 11, 2026",
+      "featured": true
+    },
+    {
+      "topic": "Budgets",
+      "year": "2024",
+      "title": "Cast the only vote against the 2024 property tax rate increase",
+      "summary": "I said the city didn't yet have the data to justify raising the rate. I suggested using reserves to cover a position mid-year if it was needed.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024June18.pdf",
+      "source_label": "Council minutes, June 18, 2024",
+      "featured": false
+    },
+    {
+      "topic": "Budgets",
+      "year": "2024–2025",
+      "title": "Kept Logan out of a risky 20-year power contract",
+      "summary": "I moved to approve a smaller natural-gas 'peaker' plant for peak demand. I opposed signing Logan onto a large baseload plant because of the financial risk of a 20-year commitment. In January 2025 the council voted 4–1 not to join.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2025January7.pdf",
+      "source_label": "Council minutes, Dec. 3, 2024 and Jan. 7, 2025",
+      "featured": false
+    },
+    {
+      "topic": "Budgets",
+      "year": "2024–2025",
+      "title": "Served on the city's Audit Committee",
+      "summary": "I reviewed the city's quarterly finances and helped select a new independent auditor in 2025.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20MINUTES%2025February18.pdf",
+      "source_label": "Council minutes, Feb. 18, 2025",
+      "featured": false
+    },
+    {
       "topic": "Transparency",
-      "summary": "As Chair, I scheduled public open houses in August and October 2026 so residents could ask questions about a proposed data center before the council made decisions.",
-      "link": "",
-      "featured": true
-    },
-    {
       "year": "2026",
-      "title": "Led the council as Chair",
-      "topic": "Leadership",
-      "summary": "Ran every regular council meeting in 2026, kept public comment open at each one, and represented Logan on the Logan-Cache Airport sponsor board, the Golf Advisory Board and other city boards.",
-      "link": "https://www.loganutah.gov/government/city_council/index.php",
+      "title": "Opened City Hall with monthly office hours",
+      "summary": "The Mayor and council members now hold open office hours on the first Tuesday of every month at 4:30 p.m. at City Hall. No appointment is needed.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026March3.pdf",
+      "source_label": "Council minutes, Mar. 3, 2026",
       "featured": true
     },
     {
-      "year": "2024–2026",
-      "title": "Supported the Logan Youth City Council",
-      "topic": "Community",
-      "summary": "Worked with Logan's Youth City Council, giving high school students a real seat in local government and a chance to bring their ideas to the council.",
-      "link": "",
+      "topic": "Transparency",
+      "year": "2026",
+      "title": "Put the data center question in front of the public first",
+      "summary": "When data center proposals started coming to Cache Valley, I scheduled a special meeting as Chair. The council passed a 180-day pause 5–0 so the city could write rules before any project arrived. I then scheduled two public open houses so residents could ask questions and shape those rules.",
+      "source": "https://www.loganutah.gov/departments/DRAFT%20Minutes%2026June30%20Special%20Meeting%20Data%20Centers.pdf",
+      "source_label": "Council minutes, June 30, 2026",
       "featured": false
     },
     {
-      "year": "2025",
-      "title": "Served on the Renewable Energy & Sustainability Advisory Board",
-      "topic": "Utilities",
-      "summary": "Council liaison to RESAB, which advises the city on Logan Light & Power's energy mix and keeping power reliable and affordable.",
-      "link": "",
+      "topic": "Transparency",
+      "year": "2026",
+      "title": "Made council reports a standing part of every meeting",
+      "summary": "As Chair, I added a standing agenda item to every meeting where council members report publicly on their boards, neighborhood meetings and anything residents should know about.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026January6.pdf",
+      "source_label": "Council minutes, Jan. 6, 2026",
+      "featured": false
+    },
+    {
+      "topic": "Transparency",
+      "year": "2024–2025",
+      "title": "Pushed for more public hearings",
+      "summary": "I asked for a second public hearing before the council finalized the 2024 ADU and short-term rental rules. In 2025, I voted against moving changes to the wetland setback rules forward without another public hearing.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20MINUTES%2025October7.pdf",
+      "source_label": "Council minutes, Sept. 17, 2024 and Oct. 7, 2025",
+      "featured": false
+    },
+    {
+      "topic": "Transportation",
+      "year": "2024–2025",
+      "title": "Made walking and biking part of Logan's transportation plan",
+      "summary": "As council liaison to the Bicycle and Pedestrian Advisory Committee, I pushed for the city's transportation master plan to build in safe walking and biking routes. I joined UDOT's walk audit of Highway 89/91 and promoted Logan's Bike Week each year.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2024March5.pdf",
+      "source_label": "Council minutes, Mar. 5 and May 7, 2024",
+      "featured": true
+    },
+    {
+      "topic": "Transportation",
+      "year": "2024–2025",
+      "title": "Asked new neighborhoods to connect to the trail system",
+      "summary": "I met with neighborhood councils about new subdivisions such as Willow Lakes. I pressed developers on trail connections, sidewalks and traffic, and asked that a planned trail be built with an earlier phase instead of left for later.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2025September2.pdf",
+      "source_label": "Council minutes, Dec. 3, 2024 and Sept. 2, 2025",
+      "featured": false
+    },
+    {
+      "topic": "Community",
+      "year": "2026",
+      "title": "Made neighborhood block parties easier",
+      "summary": "After a 2026 Utah League of Cities and Towns conference, the Mayor and I launched a simple process for neighbors to close their street for a block party. The city delivers the road-closure signs.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026June02.pdf",
+      "source_label": "Council minutes, June 2, 2026",
+      "featured": false
+    },
+    {
+      "topic": "Community",
+      "year": "2024–2026",
+      "title": "Supported Logan's Youth City Council",
+      "summary": "I worked with Logan's Youth City Council so high school students get a real seat in local government, including at Local Officials Day at the State Capitol.",
+      "source": "https://www.loganutah.gov/departments/admin/council/DRAFT%20Minutes%2026March3.pdf",
+      "source_label": "Council minutes, Mar. 3, 2026",
       "featured": false
     }
   ]

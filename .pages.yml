@@ -22,12 +22,22 @@ content:
         list: true
         description: Newest or most important first. "Featured" ones (up to 4) show on the home page.
         fields:
+          - name: topic
+            label: Topic
+            type: select
+            required: true
+            options:
+              values: [Housing, Budgets, Transparency, Transportation, Community]
           - { name: year, label: Year, type: string, required: true }
           - { name: title, label: Headline, type: string, required: true }
-          - { name: topic, label: Topic, type: string, description: "e.g. Attainable housing, Transparency" }
           - { name: summary, label: What happened (2–3 sentences), type: text, required: true }
-          - { name: link, label: Link for more info (optional), type: string }
-          - { name: featured, label: Show on home page, type: boolean }
+          - { name: source, label: Source link (minutes PDF or article), type: string }
+          - { name: source_label, label: Source label, type: string, description: "e.g. Council minutes, June 18, 2024" }
+          - { name: featured, label: Show on home page (pick 4), type: boolean }
+      - name: topics
+        type: string
+        list: true
+        hidden: true
 
   - name: priorities
     label: Priorities

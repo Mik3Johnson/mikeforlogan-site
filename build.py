@@ -269,6 +269,7 @@ def write(url, content):
 # ---------------------------------------------------------------- page pieces
 def record_cards(items):
     return "".join(f"""<article class="card">
+<span class="tag">{esc(r['topic'])}</span>
 <div class="yr">{esc(r['year'])}</div>
 <h3>{esc(r['title'])}</h3>
 <p>{esc(r['summary'])}</p>
@@ -406,10 +407,21 @@ def main():
     sitemap.append(("/", "1.0"))
 
     # ---- record
-    tl = "".join(f"""<li><div class="yr">{esc(r['year'])} · {esc(r['topic'])}</div><h3>{esc(r['title'])}</h3><p>{esc(r['summary'])}</p>{f'<p><a href="{esc(r["link"])}" rel="noopener">Learn more →</a></p>' if r.get('link') else ''}</li>"""
-                 for r in RECORD["items"])
+    topics = RECORD.get("topics") or sorted({r["topic"] for r in RECORD["items"]})
+    def slug(t): return re.sub(r"[^a-z]+", "-", t.lower()).strip("-")
+    jump = '<p class="jump">' + " · ".join(f'<a href="#{slug(t)}">{esc(t)}</a>' for t in topics if any(r["topic"] == t for r in RECORD["items"])) + "</p>"
+    tl = ""
+    for t in topics:
+        rs = [r for r in RECORD["items"] if r["topic"] == t]
+        if not rs:
+            continue
+        tl += f'<h2 id="{slug(t)}" class="topic-h">{esc(t)}</h2><ol class="timeline">'
+        for r in rs:
+            src = f'<p class="src"><a href="{esc(r["source"])}" rel="noopener">Source: {esc(r.get("source_label") or "Council minutes")}</a></p>' if r.get("source") else ""
+            tl += f"<li><div class=\"yr\">{esc(r['year'])}</div><h3>{esc(r['title'])}</h3><p>{esc(r['summary'])}</p>{src}</li>"
+        tl += "</ol>"
     body = f"""<section class="page-hero"><div class="wrap"><p class="eyebrow">My record</p><h1>Three years on the Logan City Council</h1><p class="lead">{esc(RECORD['intro'])}</p></div></section>
-<section class="section"><div class="wrap narrow"><ol class="timeline">{tl}</ol>
+<section class="section"><div class="wrap narrow">{jump}{tl}
 <p class="muted">Council decisions are made by the full council, working with the Mayor and city staff. Minutes and video of every meeting are on the <a href="https://www.loganutah.gov/government/city_council/index.php" rel="noopener">City of Logan website</a>.</p></div></section>
 {cta()}"""
     items = {"@type": "ItemList", "name": "Mike Johnson's record on the Logan Municipal Council", "itemListElement": [

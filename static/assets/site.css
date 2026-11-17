@@ -185,3 +185,10 @@ legend { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
   form.panel { padding: 24px; }
   .lead { font-size: 19px; }
 }
+
+/* Record page */
+.jump { font-weight: 600; margin: 0 0 8px; }
+.topic-h { margin: 48px 0 24px; padding-top: 8px; font-size: 32px; scroll-margin-top: 96px; }
+.topic-h:first-of-type { margin-top: 8px; }
+.src { font-size: 15px; }
+.src a { color: var(--muted); }
