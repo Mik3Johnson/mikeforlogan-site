@@ -436,7 +436,7 @@ def main():
 <section class="section"><div class="wrap"><div class="grid">{priority_cards(PRIORITIES['items'], with_next=True)}</div></div></section>
 {cta()}"""
     write("/priorities/", shell("/priorities/", "Priorities | Mike Johnson for Logan City Council",
-                                "Attainable housing, fiscal responsibility, traffic and a western bypass, parks and trails, local jobs, and long-term planning for Logan, Utah.",
+                                "Attainable housing, responsible budgets, safer streets for walking and biking, the Logan Greenway, a new rec center, local jobs and long-term planning for Logan.",
                                 body, [crumbs([("Home", "/"), ("Priorities", "/priorities/")])], current="/priorities/", has_updates=hu))
     sitemap.append(("/priorities/", "0.9"))
 
