@@ -2,7 +2,7 @@
 // The mikeforlogan.com custom domain is attached in the Cloudflare dashboard
 // (Worker > Settings > Domains & Routes) once the domain is active on Cloudflare.
 {
-  "name": "mikeforlogan",
+  "name": "mikeforlogan-site",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./dist",
